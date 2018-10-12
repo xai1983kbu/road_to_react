@@ -8,6 +8,7 @@ import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSpinner, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LoginToSite from './components'
 
 library.add(faSpinner);
 
@@ -69,7 +70,6 @@ class App extends Component {
       this.fetchSearchTopStories = this.fetchSearchTopStories.bind(this);
       this.onDismiss = this.onDismiss.bind(this);
   }
-
 
   needsToSearchTopStories(searchTerm) {
       return !this.state.results[searchTerm]
@@ -168,6 +168,7 @@ class App extends Component {
 
     return (
       <div className="page">
+          <LoginToSite/>
           <div className="interactions">
               <Search
                 value={searchTerm}
